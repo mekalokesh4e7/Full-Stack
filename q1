@@ -1,0 +1,28 @@
+package exam;
+import java.util.*;
+public class q1 {
+		double delt=10.25;
+		void status(double a,double b) {
+			if(a>b) {
+				System.out.println("The flight is on time");
+			}
+			else {
+				double c=b-a;
+				System.out.println("The flight is delayed for "+c);
+			}
+		}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		q1 ob= new q1();
+		System.out.println("Enter flight number");
+		int fn=sc.nextInt();
+		System.out.println("Enter destination");
+		String des=sc.next();
+		System.out.println("Enter departure Time");
+		double dt=sc.nextDouble();
+		System.out.println("Enter destination time mentioned on the Ticket");
+		double dest=sc.nextDouble();
+		ob.status(dest,ob.delt);
+	}
+}
