@@ -15,7 +15,7 @@
         var a;
         var b;
         function lokesh(a){
-            document.getElementById("txt").value=document.getElementById("head").innerText;
+            document.getElementById("head").innerText=document.getElementById("txt").value;
         }
         var i=[1,2,'a','b',"lok"];
         console.log(i);
