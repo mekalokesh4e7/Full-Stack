@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="txt" type="text" onclick="lokesh(a,b)"/>
+    <h1 id="head">i am lokesh</h1>
+    <script>
+        function lokesh(){
+            document.getElementById("head").innerText=document.getElementById("txt").value;
+        }
+        var a;
+        var b;
+        function lokesh(a){
+            document.getElementById("txt").value=document.getElementById("head").innerText;
+        }
+        var i=[1,2,'a','b',"lok"];
+        console.log(i);
+    </script>
+</body>
+</html>
