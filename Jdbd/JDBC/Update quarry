@@ -1,0 +1,34 @@
+package BASIC;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.*; 
+  
+public class FIRST { 
+    public static void main(String[] args)
+    {
+    	
+    	try {
+    		String Id="8";
+        	String Name="Kusum";
+        	
+        	Class.forName("com.mysql.cj.jdbc.Driver");
+    		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_practice","root","Mysql@4e7");
+    		PreparedStatement ps= con.prepareStatement("update first_one set Name=? where Id=?");
+    		ps.setString(1, Name);
+    		ps.setString(2, Id);
+    		int i= ps.executeUpdate();
+    		
+    		if(i>0) {
+    			System.out.println("Sucesses");
+    		}
+    		else {
+    			System.out.println("not updated");
+    		}
+    		con.close();
+    	}catch(Exception ex) {System.out.println(ex);}
+    	}
+}
